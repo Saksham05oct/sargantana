@@ -130,7 +130,6 @@ always_comb begin
                 csr_ena_int = (vleff_vl_i == 'h0) ? 1'b0 : 1'b1;
             end
             default: begin
-                assert (1 == 0);
                 csr_ena_int = 1'b0;
             end
         endcase
