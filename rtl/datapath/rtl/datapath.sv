@@ -904,6 +904,7 @@ assign debug_reg_o.rnm_read_resp = stage_no_stall_rr_q.prs1;
     assign instruction_decode_gl.vs_ovf                 = 1'b0;
     assign instruction_decode_gl.vl                 = stage_ir_rr_q.instr.vl;
     assign instruction_decode_gl.sew                 = stage_ir_rr_q.instr.sew;
+    assign instruction_decode_gl.lmul                = stage_ir_rr_q.instr.lmul;
     // selecting the exception source, interrupt or exception from the front-end
     assign interrupt_ex.valid = resp_csr_cpu_i.csr_interrupt;
     assign interrupt_ex.cause = exception_cause_t'(resp_csr_cpu_i.csr_interrupt_cause);
